@@ -1,0 +1,680 @@
+<style>
+
+$primaryC: #666;
+$mainC: #098;
+$secondaryC: #367;
+$light-fg: #fff;
+$dark-fg:#333;
+$light-bg: #fff;
+$light: #fff;
+$dark: #333;
+$dark-bg:#233;
+$bg:$light-bg;
+$fg: $dark-fg;
+$boder: #ccc;
+
+$secondFont: "Belleza";
+* {
+    transition-duration: 0.2s;
+    transition-property: color, background-color;
+    transition-timing-function: ease;
+}
+
+.copyrights{
+    font-size:14px;
+}
+body{
+  color: #333;
+  font: 16px/20px 'Roboto','Helvetica Neue','Arial','Helvetica',sans-serif;
+
+    background-color: lighten(desaturate(adjust-hue(#008877, -22.5000), 66.6667), 53.3333);
+
+}
+aside{
+  position:relative;
+}
+.sidebar {
+    text-align: center;
+  #menu{
+    padding: 0px;
+  }
+  ul.social {
+    list-style: none outside none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px;
+    li {
+      display: inline;
+      font-size: 16px;
+      a {
+        text-decoration: none;
+        color: #666;
+        -webkit-transition: color 0.2s ;
+        -moz-transition: color 0.2s ;
+        -o-transition: color 0.2s ;
+        -ms-transition: color 0.2s ;
+        transition: color 0.2s ;
+        cursor: pointer;
+        margin-left: 8px;
+        &:hover {
+          color: $mainC;
+        }
+      }
+    }
+  }
+  
+}
+.logo{
+  text-align:center;
+  float: none;
+  padding-bottom: 20px;
+  .header-logo {
+    position: relative;
+    display: inline-block;
+    .nom {
+      text-align: center;
+      h2 {
+        font-weight: normal;
+        line-height: 30px;
+        margin-top: 30px;
+        font-family: $secondFont, sans-serif;
+        font-size: 3em;
+        letter-spacing: 3px;
+        line-height: 1.2em;
+        color: $mainC;
+        span {
+          margin-top:20px;
+          display: block;
+          font-size: 16px;
+          font-weight: normal;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          line-height: initial;
+        }
+      }
+    }
+  }
+}
+.navbar-nav {
+  width: 100%;
+   li{
+    border-top: 1px dashed #eee;
+    position: relative;
+    float: none;
+    a{
+      font-size: 14px;
+      font-weight: bold;
+      position: relative;
+      text-transform: uppercase;
+      outline: none;
+      &:hover{
+       background-color: transparent;
+       box-shadow: 0px 8px 10px 0px #e8e8e8;
+     }
+    }
+  }
+}
+#home{
+  .big{
+    font-size:3em;
+    font-weight:900;
+    font-family: $secondFont;
+    text-transform: uppercase;
+    color: #222;
+    letter-spacing:3px;
+    margin-bottom:0px;
+
+  }
+  .avatar{
+    padding: 12px;
+    border:1px solid #ccc;
+    background:$bg;
+    margin: 20px auto;
+    
+  }
+}
+#resume{
+  
+}
+#contact{
+  .form-control{
+    margin: 10px auto;
+  }
+  .get_in {
+    list-style: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    p {
+      display: inline-block;
+      padding-left: 10px;
+    }
+    li i {
+      border-radius: 25px;
+      color: $bg;
+      height: 40px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 40px;
+      background-color: $mainC;
+    }
+  }
+}
+.section {
+  padding: 20px;
+  margin: 20px auto;
+
+  .paper{
+    min-height:88vh;
+    background:$bg;
+    color: $fg;
+    padding:20px 10px;
+    border:1px solid #ccc;
+    box-shadow: 0px 3px 5px rgba($fg, .2);
+    position:relative;
+    padding: 50px;
+    &::before {
+      background: #fcfcfc;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      content: "";
+      height: 100%;
+      left: -2px;
+      position: absolute;
+      top: 1px;
+      transform: rotate(2deg);
+      width: 100%;
+      z-index: -2;
+    }
+/*    &::after {
+      background: #fafafa;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      content: "";
+      height: 100%;
+      left: -2px;
+      position: absolute;
+      top: 1px;
+      transform: rotate(-3deg);
+      width: 100%;
+      z-index: -2;
+    } */
+    .paper-title{
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: $fg;
+      margin-bottom: 20px;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom:20px;
+    }
+    .description{
+      text-align:justify;
+    }
+  }
+}
+.timeline{
+    position: relative;
+    margin:  auto;
+    padding: 2em 0 0;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    max-width: 1170px;
+
+    &::before {
+      /* this is the vertical line */
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      width: 3px;
+      background: $mainC;
+    }
+    .timeline-item{
+      position: relative;
+	    margin: 2em 0;
+      @media only screen and (min-width: 1170px){
+        &:nth-child(even) .timeline-content {
+          float: right;
+          text-align:right;
+        }
+      }
+      @media only screen and (min-width: 1170px){
+        &:nth-child(even) .timeline-content .date {
+            left: auto;
+            right: 127%;
+            text-align: right;
+        }
+      }
+      @media only screen and (min-width: 1170px){
+        &:nth-child(even) .timeline-content::before {
+            top: 24px;
+            left: auto;
+            right: 100%;
+            border-color: transparent;
+            border-right-color: #fff;
+        }
+      }
+      .timeline-img{
+        background: #fff;
+        position: absolute;
+        text-align:center;
+        line-height:70px;
+        color: #4b6baa;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px $mainC, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+        img {
+          display: block;
+          width: 24px;
+          height: 24px;
+          position: relative;
+          left: 50%;
+          top: 50%;
+          margin-left: -12px;
+          margin-top: -12px;
+        }
+      }
+      @media only screen and (min-width: 1170px){
+        .timeline-img {
+          width: 60px;
+          height: 60px;
+          left: 50%;
+          margin-left: -28px;
+          -webkit-transform: translateZ(0);
+          -webkit-backface-visibility: hidden;
+        }
+      }
+    }
+    .timeline-content{
+      background-image: url(http://snapsvg.io/assets/images/logo-twitter.svg);
+    background-color: #efefef !important;
+      position: relative;
+      margin-left: 60px;
+      
+      border-radius: 0.25em;
+      padding: 1em;
+      box-shadow: 0 3px 0 #d7e4ed;
+      margin-left: 0;
+      padding: 1.6em;
+      width:44%;
+      color:#aaa;
+      line-height: 1.6;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid #fff;
+      }
+      @media only screen and (min-width: 1170px){
+        &::before {
+          top: 24px;
+          left: 100%;
+          border-color: transparent;
+          border-left-color: #fff;
+        }
+      }
+      .date{
+        display: inline-block;
+        float: left;
+        position: absolute;
+        left: 125%;
+        top: 23px;
+        font-weight: 900;
+      }
+      a:hover{
+          text-decoration:none;
+        }
+      .timeline-content-heading{
+        margin-top:0px;
+        font-family: "Belleza";
+        font-size: 2.2em;
+        
+      }
+    }
+  }
+.dashed{
+  border:2px dashed #ccc;
+}
+.scroll-top {
+  background: #fff;
+  border-radius:15px;
+  bottom: 10px;
+  display: inline;
+  height: 30px;
+  position: fixed;
+  right: 10px;
+  width: 30px;
+  z-index: 20;
+  text-align: center;
+  outline: none;
+  line-height:30px;
+}
+.timeline-img.is-hidden {
+  visibility: hidden;
+}
+.timeline-img.bounce-in {
+  visibility: visible;
+  animation: cd-bounce-1 0.6s;
+}
+@keyframes bounce-1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+ 
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+ 
+  100% {
+    transform: scale(1);
+  }
+}
+.fixed{
+  position:fixed;
+  top:-5px;
+  left:0px;
+  height:100%;
+  padding:0px !important;
+  width:20%;
+  & > .well{
+    padding:0px !important;
+
+    height: 102%;
+    .sidebar{
+      height:100%;
+      overflow: auto
+      
+    }
+  }
+  
+}
+.timeline-box{
+  background: #ffffff;
+  position: absolute;
+  box-shadow: 0 0 0 4px $mainC, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -23px;
+ 
+  background-repeat: no-repeat;
+  background-position: center center;
+  &.bottom{
+    bottom: -2em;
+  }
+  &.top{
+    top: 0;
+  }
+  &.baby{
+    background-image: url('https://www.facebook.com/rsrc.php/v2/yg/r/A2sk6_j-Y1m.png');
+  }
+  &.work{
+    background-image: url(https://www.facebook.com/rsrc.php/v2/yt/r/oDAw93Nh3oL.png);
+  }
+  &.study{
+    background-image: url(https://www.facebook.com/rsrc.php/v2/yd/r/BKYpH8rKFn2.png);
+  }
+}
+.main-fg{
+  color: $mainC !important;
+}
+.main-bg{
+  background-color: $mainC !important;
+}
+.sidebar-wrapper{
+    width: 20%;
+    float: left;
+}
+.content{
+  width: 80%;
+  float: left;
+  margin-left:20%;
+}
+
+
+</style>
+<div class="container">
+   <div class="row">
+    <aside class="sidebar-wrapper fixed">
+      <div class="well">
+      <div class="logo ">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-navicon"></i>
+            </button>
+            <!-- Logo -->
+            <div class="header-logo">
+              <!--img src="img/logo-2.png" alt="Logo"-->
+              <div class="nom">
+                <h2>Aymene<br>Bourafai<span>Web designer<br> & <br>developer </span></h2>
+              </div>
+            </div> 
+            <!-- Logo -->
+          </div>
+      <div class="sidebar ">
+        <nav id="nav">
+          
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav" id="navs">
+              <li class=""><a href="#home" class="colapse-menu1">Home</a></li>
+              <li class=""><a href="#timeline" class="colapse-menu1">Time Line</a></li>
+              <li class="active"><a href="#resume" class="colapse-menu1">Resume</a></li>
+              <li class=""><a href="#service" class="colapse-menu1">Service</a></li>
+							<li class=""><a href="#works" class="colapse-menu1">Works</a></li>
+							<li class=""><a href="http://html.metrothemes.me/lucas/" class="colapse-menu1">Blog</a></li>
+              <li class=""><a href="#contact" class="colapse-menu1">Contact</a></li>    
+            </ul>
+          </div>
+        </nav>
+        <div class="social-list">
+					<ul class="social">
+						<li><a href="https://twitter.com/bourafai" data-placement="top" data-toggle="tooltip" title="" data-original-title="twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/111551361272759739749/" data-placement="top" data-toggle="tooltip" title="google plus"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/bourafai" data-placement="top" data-toggle="tooltip" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://github.com/thepunisherbabi" data-placement="top" data-toggle="tooltip" title="" data-original-title="github"><i class="fa fa-github"></i></a></li>
+						<li><a href="https://www.facebook.com/aymene.bourafai" data-placement="top" data-toggle="tooltip" title="" data-original-title="facebook"><i class="fa fa-facebook"></i></a></li>	
+						
+					</ul>
+				</div>
+      </div>
+      
+      
+      </div>
+    </aside>
+    <main class=" content">
+      <section id="home" class="section">
+        <div class="row text-center">
+          <img width="280" class=" img-circle avatar" src="https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/13240539_1158297240881567_7901859186972426243_n.jpg?oh=d6881324c078dad08910355d98d9fdba&oe=581C5ADD" alt="">
+          <h1 id="name" class="big">Aymene Bourafai</h1>
+        </div>
+      </section>
+      <section id="timeline"  class="section">
+        <div class="timeline">
+          <span class="timeline-box top work"></span>
+          <div class="timeline-item row">
+            <div class="timeline-img">
+              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg ">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+          <div class="timeline-item row">
+            <div class="timeline-img">
+              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+          <div class="timeline-item row">
+            <div class="timeline-img">
+              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg ">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+          <div class="timeline-item row">
+            <div class="timeline-img">
+              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+          <span class="timeline-box bottom baby"></span>
+        </div>
+        <div class="timeline">
+          <span class="timeline-box top study"></span>
+          <div class="timeline-item row">
+            <div class="timeline-img">
+              <i class="fa fa-camera-retro fa-2x"></i>
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg ">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+                    <div class="timeline-item row">
+            <div class="timeline-img">
+              <i class="fa fa-camera-retro fa-2x"></i>
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg ">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+                    <div class="timeline-item row">
+            <div class="timeline-img">
+              <i class="fa fa-camera-retro fa-2x"></i>
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg ">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+                    <div class="timeline-item row">
+            <div class="timeline-img">
+              <i class="fa fa-camera-retro fa-2x"></i>
+            </div> <!-- timeline-img -->
+            <div class="timeline-content well">
+              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
+              <span class="date label main-bg ">Jan 14 - Jan 15</span>
+            </div> <!-- timeline-content -->
+          </div> <!-- timeline-item -->
+          <span class="timeline-box bottom baby"></span>
+        </div>
+      </section>
+      <section id="resume" class="section">
+        <div class="paper">
+          <div class="row">
+            <h2 class="paper-title">Resume</h2>
+          </div>
+          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </div>
+      </section>
+      <section id="service" class="section">
+        <div class="paper">
+          <div class="row">
+            <h2 class="paper-title">Services</h2>
+          </div>
+          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
+        </div>
+      </section>
+      <section id="works" class="section">
+        <div class="paper">
+          <div class="row">
+            <h2 class="paper-title">Works</h2>
+          </div>
+          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <div class="paper">
+          <div class="row">
+            <h2 class="paper-title">Contact</h2>
+          </div>
+          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
+          <div class="row dashed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51412.49465270809!2d6.587479687255864!3d36.353973973564955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sdz!4v1470962453309" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+          <div class="row">
+            <h2>LET'S GET IN TOUCH</h2>
+            <div class="col-md-6">
+								
+									<ul class="get_in">
+										<li><i class="fa fa-envelope-o"></i><p>bourafai.a@gmail.com</p></li>
+										<li><i class="fa fa-phone"></i><p>+213 779 69 66 73</p></li>				
+										<li><i class="fa fa-map-marker"></i><p>Ain smara, Constantine, Algeria</p></li>
+										<li><a href="#"><i class="fa fa-cloud-download"></i><p>Download Vcard</p></a></li>	
+									</ul>
+							</div>
+            <div class="col-md-6">
+              <form class="form " action="">
+                  <input type="text" class="form-control" id="name" placeholder="Name">
+                  <input type="text" class="form-control" id="email" placeholder="Email">
+                  <textarea  class="form-control" name="" id="" cols="30" rows="8" placeholder="your message here"></textarea>
+                <input type="submit" class="btn btn-default btn-block" value="submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<div class="container">
+  <footer class=" col-md-5 col-md-offset-5 copyrights text-center">
+  <p>copyrights &copy; 2016 Aymene Bourafai</p>
+  </footer>
+</div>
