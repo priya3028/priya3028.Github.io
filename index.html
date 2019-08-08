@@ -1,680 +1,580 @@
 <style>
-
-$primaryC: #666;
-$mainC: #098;
-$secondaryC: #367;
-$light-fg: #fff;
-$dark-fg:#333;
-$light-bg: #fff;
-$light: #fff;
-$dark: #333;
-$dark-bg:#233;
-$bg:$light-bg;
-$fg: $dark-fg;
-$boder: #ccc;
-
-$secondFont: "Belleza";
-* {
-    transition-duration: 0.2s;
-    transition-property: color, background-color;
-    transition-timing-function: ease;
-}
-
-.copyrights{
-    font-size:14px;
-}
-body{
-  color: #333;
-  font: 16px/20px 'Roboto','Helvetica Neue','Arial','Helvetica',sans-serif;
-
-    background-color: lighten(desaturate(adjust-hue(#008877, -22.5000), 66.6667), 53.3333);
+	*{ position: relative;
+/*    border: solid 0.1px; */
+vertical-align: middle;
 
 }
-aside{
-  position:relative;
-}
-.sidebar {
-    text-align: center;
-  #menu{
-    padding: 0px;
-  }
-  ul.social {
-    list-style: none outside none;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-top: 0;
-    padding: 10px;
-    li {
-      display: inline;
-      font-size: 16px;
-      a {
-        text-decoration: none;
-        color: #666;
-        -webkit-transition: color 0.2s ;
-        -moz-transition: color 0.2s ;
-        -o-transition: color 0.2s ;
-        -ms-transition: color 0.2s ;
-        transition: color 0.2s ;
-        cursor: pointer;
-        margin-left: 8px;
-        &:hover {
-          color: $mainC;
-        }
-      }
-    }
-  }
+
+html,body {width:980px; height:1350px; margin:0px; padding:0px;
+overflow-x: hidden }
+
+.resume{ width:862px; height: 1218px; margin-left: auto; margin-right: auto; margin-top: 60px; box-shadow:10px 15px 15px -10px  rgba(0,0,0,0.20)
   
-}
-.logo{
-  text-align:center;
-  float: none;
-  padding-bottom: 20px;
-  .header-logo {
-    position: relative;
-    display: inline-block;
-    .nom {
-      text-align: center;
-      h2 {
-        font-weight: normal;
-        line-height: 30px;
-        margin-top: 30px;
-        font-family: $secondFont, sans-serif;
-        font-size: 3em;
-        letter-spacing: 3px;
-        line-height: 1.2em;
-        color: $mainC;
-        span {
-          margin-top:20px;
-          display: block;
-          font-size: 16px;
-          font-weight: normal;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          line-height: initial;
-        }
-      }
-    }
   }
-}
-.navbar-nav {
-  width: 100%;
-   li{
-    border-top: 1px dashed #eee;
-    position: relative;
-    float: none;
-    a{
-      font-size: 14px;
-      font-weight: bold;
-      position: relative;
-      text-transform: uppercase;
-      outline: none;
-      &:hover{
-       background-color: transparent;
-       box-shadow: 0px 8px 10px 0px #e8e8e8;
-     }
-    }
-  }
-}
-#home{
-  .big{
-    font-size:3em;
-    font-weight:900;
-    font-family: $secondFont;
-    text-transform: uppercase;
-    color: #222;
-    letter-spacing:3px;
-    margin-bottom:0px;
 
-  }
-  .avatar{
-    padding: 12px;
-    border:1px solid #ccc;
-    background:$bg;
-    margin: 20px auto;
-    
-  }
-}
-#resume{
-  
-}
-#contact{
-  .form-control{
-    margin: 10px auto;
-  }
-  .get_in {
-    list-style: none;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    p {
-      display: inline-block;
-      padding-left: 10px;
-    }
-    li i {
-      border-radius: 25px;
-      color: $bg;
-      height: 40px;
-      line-height: 20px;
-      margin-bottom: 10px;
-      padding: 10px;
-      text-align: center;
-      width: 40px;
-      background-color: $mainC;
-    }
-  }
-}
-.section {
-  padding: 20px;
-  margin: 20px auto;
+.left, .right{display: inline-block; box-sizing: border-box }
 
-  .paper{
-    min-height:88vh;
-    background:$bg;
-    color: $fg;
-    padding:20px 10px;
-    border:1px solid #ccc;
-    box-shadow: 0px 3px 5px rgba($fg, .2);
-    position:relative;
-    padding: 50px;
-    &::before {
-      background: #fcfcfc;
-      border: 1px solid rgba(0, 0, 0, 0.15);
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      content: "";
-      height: 100%;
-      left: -2px;
-      position: absolute;
-      top: 1px;
-      transform: rotate(2deg);
-      width: 100%;
-      z-index: -2;
-    }
-/*    &::after {
-      background: #fafafa;
-      border: 1px solid rgba(0, 0, 0, 0.15);
-      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      -ms-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      content: "";
-      height: 100%;
-      left: -2px;
-      position: absolute;
-      top: 1px;
-      transform: rotate(-3deg);
-      width: 100%;
-      z-index: -2;
-    } */
-    .paper-title{
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: $fg;
-      margin-bottom: 20px;
-      border-bottom: 1px dashed #ccc;
-      padding-bottom:20px;
-    }
-    .description{
-      text-align:justify;
-    }
-  }
-}
-.timeline{
-    position: relative;
-    margin:  auto;
-    padding: 2em 0 0;
-    margin-top: 4em;
-    margin-bottom: 2em;
-    max-width: 1170px;
+.left{width:306px; height:1218px}
 
-    &::before {
-      /* this is the vertical line */
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      height: 100%;
-      width: 3px;
-      background: $mainC;
-    }
-    .timeline-item{
-      position: relative;
-	    margin: 2em 0;
-      @media only screen and (min-width: 1170px){
-        &:nth-child(even) .timeline-content {
-          float: right;
-          text-align:right;
-        }
-      }
-      @media only screen and (min-width: 1170px){
-        &:nth-child(even) .timeline-content .date {
-            left: auto;
-            right: 127%;
-            text-align: right;
-        }
-      }
-      @media only screen and (min-width: 1170px){
-        &:nth-child(even) .timeline-content::before {
-            top: 24px;
-            left: auto;
-            right: 100%;
-            border-color: transparent;
-            border-right-color: #fff;
-        }
-      }
-      .timeline-img{
-        background: #fff;
-        position: absolute;
-        text-align:center;
-        line-height:70px;
-        color: #4b6baa;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        box-shadow: 0 0 0 4px $mainC, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-        img {
-          display: block;
-          width: 24px;
-          height: 24px;
-          position: relative;
-          left: 50%;
-          top: 50%;
-          margin-left: -12px;
-          margin-top: -12px;
-        }
-      }
-      @media only screen and (min-width: 1170px){
-        .timeline-img {
-          width: 60px;
-          height: 60px;
-          left: 50%;
-          margin-left: -28px;
-          -webkit-transform: translateZ(0);
-          -webkit-backface-visibility: hidden;
-        }
-      }
-    }
-    .timeline-content{
-      background-image: url(http://snapsvg.io/assets/images/logo-twitter.svg);
-    background-color: #efefef !important;
-      position: relative;
-      margin-left: 60px;
-      
-      border-radius: 0.25em;
-      padding: 1em;
-      box-shadow: 0 3px 0 #d7e4ed;
-      margin-left: 0;
-      padding: 1.6em;
-      width:44%;
-      color:#aaa;
-      line-height: 1.6;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 16px;
-        right: 100%;
-        height: 0;
-        width: 0;
-        border: 7px solid transparent;
-        border-right: 7px solid #fff;
-      }
-      @media only screen and (min-width: 1170px){
-        &::before {
-          top: 24px;
-          left: 100%;
-          border-color: transparent;
-          border-left-color: #fff;
-        }
-      }
-      .date{
-        display: inline-block;
-        float: left;
-        position: absolute;
-        left: 125%;
-        top: 23px;
-        font-weight: 900;
-      }
-      a:hover{
-          text-decoration:none;
-        }
-      .timeline-content-heading{
-        margin-top:0px;
-        font-family: "Belleza";
-        font-size: 2.2em;
-        
-      }
-    }
-  }
-.dashed{
-  border:2px dashed #ccc;
+.lefttop{width:306px; height:327px; background-image:url(' https://ak3.picdn.net/shutterstock/videos/4849793/thumb/1.jpg');
+background-position: -140px ;
+background-size: cover
 }
-.scroll-top {
-  background: #fff;
-  border-radius:15px;
-  bottom: 10px;
-  display: inline;
-  height: 30px;
-  position: fixed;
-  right: 10px;
-  width: 30px;
-  z-index: 20;
-  text-align: center;
-  outline: none;
-  line-height:30px;
-}
-.timeline-img.is-hidden {
-  visibility: hidden;
-}
-.timeline-img.bounce-in {
-  visibility: visible;
-  animation: cd-bounce-1 0.6s;
-}
-@keyframes bounce-1 {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
- 
-  60% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
- 
-  100% {
-    transform: scale(1);
-  }
-}
-.fixed{
-  position:fixed;
-  top:-5px;
-  left:0px;
-  height:100%;
-  padding:0px !important;
-  width:20%;
-  & > .well{
-    padding:0px !important;
+.leftbottom {width:306px; height:891px; background-color: #6495aa;
+font-family: HelveticaNeue-Condensed;
+color: #fff;
+text-align: center}
 
-    height: 102%;
-    .sidebar{
-      height:100%;
-      overflow: auto
-      
-    }
-  }
-  
+.leftbottom h3{
+letter-spacing: 3px;
+font-size:30px;
+margin-bottom: 5px;
+margin-top:0px;
+padding-top:20px
 }
-.timeline-box{
-  background: #ffffff;
+
+.leftbottom h4{ letter-spacing: 7px;
+font-weight: 50}
+
+.personal{
+border-bottom: solid 2px;
+padding-bottom:12px ;  
+width:240px;
+top:110px;
+position: absolute;
+left:38px; text-align: left
+}
+.contact { 
+border-bottom: solid 2px;
+padding-bottom:12px ;  
+width:240px; top:300px; 
+position: absolute;
+left:38px;
+text-align: left
+} 
+.peritem {
+font-weight: 100;
+padding-bottom:5px ;  
+width:240px; top:160px; 
+position: absolute;
+left:38px;
+text-align: left}
+
+.peritem p {border-bottom: solid 1px;
+padding-bottom: 2px ;
+letter-spacing: 1px}
+
+.conitem{
+font-weight: 100;
+padding-bottom:5px ;  
+width:240px; top:350px; 
+position: absolute;
+left:38px;
+text-align: left  
+}
+.conitem p {border-bottom: solid 1px;
+padding-bottom: 2px ;
+letter-spacing: 0px;
+}
+
+.ed {
+border-bottom: solid 2px;
+padding-bottom:12px ;  
+width:240px; top:515px; 
+position: absolute;
+left:38px;
+text-align: left}
+
+.institute{
+font-weight: 100;
+width:240px; top:575px; 
+position: absolute;
+left:38px;
+text-align: left;
+font-size: 12px;
+letter-spacing: 1px;
+/* border-bottom: solid 1px; */
+}
+.institute p{line-height:20px;
+padding-bottom: 0px; margin-bottom: 3px}
+
+.leftbottom span { font-weight:60;letter-spacing: 3px}
+
+.leftbottom,.lefttop{ box-sizing: border-box}
+
+.icons { width:240px;height:60px;position: absolute;left:27px;top:800px }
+
+.fb{ width:50px; height: 50px; position: absolute; left:10px; top:5px; line-height: 50px; background-image: url(https://static.wixstatic.com/media/95924b_fad19adafcb047e98b534b2ce396808a~mv2.png);background-size: cover}
+
+.behance{ width:50px; height: 50px; position: absolute; left:95px; top:5px; line-height: 50px;background-image: url(https://static.wixstatic.com/media/95924b_f3b5d4603227407fbf237227d0201031~mv2.png); background-size: cover}
+
+.medium{ width:50px; height: 50px; position: absolute; left:180px; top:5px; line-height: 50px;background-image: url(https://static.wixstatic.com/media/95924b_01ab2c5f473d4f7d98cd651e2220ce44~mv2.png); background-size: cover}
+
+.right{
+  width:556px; 
+  height:1218px;
+  background-color: #fffffc}
+
+.right h4{ color:#6495aa;
+width:240px;
+left:28px;
+text-align: left;
+margin-bottom: -1px;
+letter-spacing: 7px
+}
+.profile p{ text-align:justify ;text-justify: distribute;
+ width: 495px;
+ left:28px;
+ letter-spacing: 0.2px;
+ color:rgba(0,0,0,0.7)
+}
+.ability {width: 495px; box-sizing: border-box; 
+ left:28px;
+ margin-top:2px}
+
+.circle1, .circle2, .circle3{ display: inline-block;width:120px; height:120px;
+ margin-left: 33.15px;
+ border-radius:100%; background-color:#6495aa;
+overflow: hidden;}
+
+.tri1{left: 46px;width:0px; height:0px; border-top:60px solid transparent; border-bottom:60px solid transparent; border-right:90px solid #dbdbd9;
+transform-origin:0px 60px;
+transform: rotate(-125deg); margin-right: auto; margin-left:auto }
+
+.tri2{left: 70px; bottom:28px; width:0px; height:0px; border-top:90px solid transparent; border-bottom:90px solid transparent; border-right:90px solid #dbdbd9;
+transform-origin:-12px 95px;
+transform: rotate(225deg); margin-right: auto; margin-left:auto }
+
+.tri3{left: 46px; bottom: 120px; width:0px; height:0px; border-top:180px solid transparent; border-bottom:180px solid transparent; border-right:90px solid #dbdbd9;
+transform-origin:0px 180px;
+transform: rotate(205deg); margin-right: auto; margin-left:auto}
+
+.littlecircle {width: 100px; height:100px; margin-left: auto; margin-right: auto; top: -110px; border-radius:100%; background-color:#fffffc}
+
+.Design { width:100px; height:100px; box-sizing:border-box; position: absolute;
+text-align: center; font-size:15px; line-height:25px; padding-top:22.5px; color:#6495aa}
+
+.littlecircle2 {width: 100px; height:100px; margin-left: auto; margin-right: auto; top: -170px; border-radius:100%; background-color:#fffffc}
+
+.markting { width:100px; height:100px; box-sizing:border-box; position: absolute;
+text-align: center; font-size:15px; line-height:95px; color:#6495aa}
+
+.littlecircle3 {width: 100px; height:100px; right: 10px; top: 10px; border-radius:100%; background-color:#fffffc; position: absolute}
+
+.Front-end { width:100px; height:100px; box-sizing:border-box; position: absolute;
+text-align: center; font-size:15px; line-height:25px; padding-top:22.5px; color:#6495aa}
+
+.experience{ height:580px; 
+  box-sizing: border-box}
+.experience h4{ 
+color:#6495aa;
+width:300px;
+left:28px;
+text-align: left;
+margin-bottom: -1px;
+letter-spacing: 7px
+}
+.tag1{ background-color:#6495aa; 
+  width:100px;
+  height:34px;
+  left:28px;
+  top:64px; 
   position: absolute;
-  box-shadow: 0 0 0 4px $mainC, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-  width: 50px;
-  height: 50px;
-  left: 50%;
-  margin-left: -23px;
- 
-  background-repeat: no-repeat;
-  background-position: center center;
-  &.bottom{
-    bottom: -2em;
-  }
-  &.top{
-    top: 0;
-  }
-  &.baby{
-    background-image: url('https://www.facebook.com/rsrc.php/v2/yg/r/A2sk6_j-Y1m.png');
-  }
-  &.work{
-    background-image: url(https://www.facebook.com/rsrc.php/v2/yt/r/oDAw93Nh3oL.png);
-  }
-  &.study{
-    background-image: url(https://www.facebook.com/rsrc.php/v2/yd/r/BKYpH8rKFn2.png);
-  }
+  font-weight:80;
+  text-align:left;
+  font-size:18px ;
+  line-height:34px;
+  color:#fff;
+  letter-spacing:4px}
+
+.tagtri1{ width:0px;
+height:1px;
+border-top:16.5px solid transparent;
+border-bottom:16.5px solid transparent;
+border-left:solid 20px #6495aa;
+position: absolute;
+left:100px;
+top:0px}
+
+.tag2{ background-color:#6495aa; 
+  width:100px;
+  height:34px;
+  left:28px;
+  top:215px; 
+  position: absolute;
+  text-align:left;
+  font-size:18px ;
+  font-weight:80;
+  line-height:34px;
+  color:#fff;
+  letter-spacing:4px}
+
+.tagtri2{ width:0px;
+height:1px;
+border-top:16.5px solid transparent;
+border-bottom:16.5px solid transparent;
+border-left:solid 20px #6495aa;
+position: absolute;
+left:100px;
+top:0px}
+
+.tag3{ background-color:#6495aa; 
+  width:100px;
+  height:34px;
+  left:28px;
+  top:319px; 
+  position: absolute;
+  text-align:left;
+  font-size:18px ;
+  font-weight:80;
+  line-height:34px;
+  color:#fff;
+  letter-spacing:4px}
+
+.tagtri3{ width:0px;
+height:1px;
+border-top:16.5px solid transparent;
+border-bottom:16.5px solid transparent;
+border-left:solid 20px #6495aa;
+position: absolute;
+left:100px;
+top:0px}
+
+.tag4{ background-color:#6495aa; 
+  width:100px;
+  height:34px;
+  left:28px;
+  top:470px; 
+  position: absolute;
+  text-align:left;
+  font-size:18px ;
+  font-weight:80;
+  line-height:34px;
+  color:#fff;
+  letter-spacing:4px}
+
+.tagtri4{ width:0px;
+height:1px;
+border-top:16.5px solid transparent;
+border-bottom:16.5px solid transparent;
+border-left:solid 20px #6495aa;
+position: absolute;
+left:100px;
+top:0px}
+
+.verline{ width:1px; height:490px; background-color:#375460;
+position: absolute;
+left:165px;
+top:82px}
+
+.spot{ width:16px; height:16px; right:7px; border-radius:100%; background-color:#375460; top:-10px }
+
+.spot2{ width:16px; height:16px; right:7px; border-radius:100%; background-color:#375460; top:126px }
+
+.spot3{ width:16px; height:16px; right:7px; border-radius:100%; background-color:#375460; top:215px }
+
+.spot4{ width:16px; height:16px; right:7px; border-radius:100%; background-color:#375460; top:350px }
+
+.exitem{width:350px; height:500px;
+left:180px;
+top:70px;
+position: absolute;
+box-sizing: border-box
 }
-.main-fg{
-  color: $mainC !important;
+.exitem h4{ font-size:13px; width:350px; left:0px; letter-spacing:3px;margin-top:0px
 }
-.main-bg{
-  background-color: $mainC !important;
+.exitem p{margin-top:0px;margin-bottom:5px;
+color:rgba(0,0,0,0.5);
 }
-.sidebar-wrapper{
-    width: 20%;
-    float: left;
+
+.software, .language{ display: inline-block; box-sizing:border-box}
+
+.software{ width:277px; height:255px;
+margin-top:5px}
+
+.software h4{ margin-top:7px; margin-bottom:0px}
+
+.psbar{height:50px; padding-top:0px;
+margin-left:26px;
+font-size:6px;
+letter-spacing:2px;
+color: rgba(0,0,0,0.55)}
+
+.barchart1{ margin-top:3px; height:20px; width:240px; background-color:#dbdbd9}
+
+.value1{ height:20px; width:200px; margin-right:auto; background-color:#6495aa }
+
+.aibar{height:50px; padding-top:0px;
+margin-left:26px;
+font-size:6px;
+letter-spacing:2px;
+color: rgba(0,0,0,0.55)}
+
+.barchart2{ margin-top:3px; height:20px; width:240px; background-color:#dbdbd9}
+
+.value2{ height:20px; width:220px; margin-right:auto; background-color:#6495aa }
+
+.idbar{ height:50px; padding-top:0px;
+margin-left:26px;
+font-size:6px;
+letter-spacing:2px;
+color: rgba(0,0,0,0.55)}
+
+.barchart3{ margin-top:3px; height:20px; width:240px; background-color:#dbdbd9}
+
+.value3{ height:20px; width:180px; margin-right:auto; background-color:#6495aa }
+
+.lrbar{ height:50px; padding-top:0px;
+margin-left:26px;
+font-size:6px;
+letter-spacing:2px;
+color: rgba(0,0,0,0.55)}
+
+.barchart4{ margin-top:3px; height:20px; width:240px; background-color:#dbdbd9}
+
+.value4{ height:20px; width:200px; margin-right:auto; background-color:#6495aa }
+
+.language {width:277px; height:255px;
+margin-top:5px;
 }
-.content{
-  width: 80%;
-  float: left;
-  margin-left:20%;
+
+.language h4{ margin-top:7px; margin-bottom:0px}
+
+.language p{font-size:13px;    
+   color:rgba(0,0,0,0.55);
+   margin-top:0px;
+   border-bottom: solid 0.5px;
+   margin-left:18px;
+   margin-bottom:0px;
+   margin-right:26px;
+   letter-spacing: 2px;
+}
+
+.mabar{ width:95px;
+  height:130px;
+  margin-top:0px;
+  background-color: rgba(100,149,179,0.75);
+  margin-left:156px
+}
+
+.english {width:259px;
+  position: absolute;
+  top:50px;
+  margin-left:18px;
+}
+
+.english p{margin-left:0px;
+  border-bottom: solid 0.5px;
+  width:173px
+}
+
+.enbar{ width:95px;
+  height:80px;
+  margin-top:0px;
+  background-color: rgba(55,84,96,0.75);
+  margin-left:78px
+}
+
+.jpn {width:259px;
+  position: absolute;
+  top:99px;
+  margin-left:18px;
+}
+
+.jpn p{margin-left:0px;
+  border-bottom: solid 0.5px;
+  width:115px
+}
+
+.jpbar{ width:95px;
+  height:31px;
+  margin-top:0px;
+  background-color: rgba(164,185,193,0.45);
+  margin-left:20px
+}
+
+.lancube{margin-top:26px;
+  font-size:2px;
+  color:rgba(0,0,0,0.55);
+  width:259px;
+  left:18px
+}
+
+.cube1 {width:15px; height:15px;
+  display: inline-block;
+background-color:rgba(100,149,179,0.75);
+top:-2px}
+
+.cube2 {width:15px; height:15px;
+  display: inline-block;
+  background-color:rgba(55,84,96,0.75);
+  left:20px;top:-2px
+}
+
+.cube3 {width:15px; height:15px;
+  display: inline-block;
+  background-color:rgba(164,185,193,0.45);
+  left:68px;top:-2px
 }
 
 
 </style>
-<div class="container">
-   <div class="row">
-    <aside class="sidebar-wrapper fixed">
-      <div class="well">
-      <div class="logo ">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <i class="fa fa-navicon"></i>
-            </button>
-            <!-- Logo -->
-            <div class="header-logo">
-              <!--img src="img/logo-2.png" alt="Logo"-->
-              <div class="nom">
-                <h2>Aymene<br>Bourafai<span>Web designer<br> & <br>developer </span></h2>
-              </div>
-            </div> 
-            <!-- Logo -->
-          </div>
-      <div class="sidebar ">
-        <nav id="nav">
-          
-          <div class="collapse navbar-collapse" id="menu">
-            <ul class="nav navbar-nav" id="navs">
-              <li class=""><a href="#home" class="colapse-menu1">Home</a></li>
-              <li class=""><a href="#timeline" class="colapse-menu1">Time Line</a></li>
-              <li class="active"><a href="#resume" class="colapse-menu1">Resume</a></li>
-              <li class=""><a href="#service" class="colapse-menu1">Service</a></li>
-							<li class=""><a href="#works" class="colapse-menu1">Works</a></li>
-							<li class=""><a href="http://html.metrothemes.me/lucas/" class="colapse-menu1">Blog</a></li>
-              <li class=""><a href="#contact" class="colapse-menu1">Contact</a></li>    
-            </ul>
-          </div>
-        </nav>
-        <div class="social-list">
-					<ul class="social">
-						<li><a href="https://twitter.com/bourafai" data-placement="top" data-toggle="tooltip" title="" data-original-title="twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="https://plus.google.com/111551361272759739749/" data-placement="top" data-toggle="tooltip" title="google plus"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/bourafai" data-placement="top" data-toggle="tooltip" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
-						<li><a href="https://github.com/thepunisherbabi" data-placement="top" data-toggle="tooltip" title="" data-original-title="github"><i class="fa fa-github"></i></a></li>
-						<li><a href="https://www.facebook.com/aymene.bourafai" data-placement="top" data-toggle="tooltip" title="" data-original-title="facebook"><i class="fa fa-facebook"></i></a></li>	
-						
-					</ul>
-				</div>
-      </div>
-      
-      
-      </div>
-    </aside>
-    <main class=" content">
-      <section id="home" class="section">
-        <div class="row text-center">
-          <img width="280" class=" img-circle avatar" src="https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/13240539_1158297240881567_7901859186972426243_n.jpg?oh=d6881324c078dad08910355d98d9fdba&oe=581C5ADD" alt="">
-          <h1 id="name" class="big">Aymene Bourafai</h1>
-        </div>
-      </section>
-      <section id="timeline"  class="section">
-        <div class="timeline">
-          <span class="timeline-box top work"></span>
-          <div class="timeline-item row">
-            <div class="timeline-img">
-              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg ">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-          <div class="timeline-item row">
-            <div class="timeline-img">
-              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-          <div class="timeline-item row">
-            <div class="timeline-img">
-              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg ">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-          <div class="timeline-item row">
-            <div class="timeline-img">
-              <img src="https://codyhouse.co/demo/vertical-timeline/img/cd-icon-picture.svg" alt="Picture"> 
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-          <span class="timeline-box bottom baby"></span>
-        </div>
-        <div class="timeline">
-          <span class="timeline-box top study"></span>
-          <div class="timeline-item row">
-            <div class="timeline-img">
-              <i class="fa fa-camera-retro fa-2x"></i>
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg ">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-                    <div class="timeline-item row">
-            <div class="timeline-img">
-              <i class="fa fa-camera-retro fa-2x"></i>
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg ">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-                    <div class="timeline-item row">
-            <div class="timeline-img">
-              <i class="fa fa-camera-retro fa-2x"></i>
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg ">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-                    <div class="timeline-item row">
-            <div class="timeline-img">
-              <i class="fa fa-camera-retro fa-2x"></i>
-            </div> <!-- timeline-img -->
-            <div class="timeline-content well">
-              <a href="#"><h2 class="timeline-content-heading">Title of section 1</h2></a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-              <a href="#0" class="btn btn-default btn-sm" class="read-more">Read more</a>
-              <span class="date label main-bg ">Jan 14 - Jan 15</span>
-            </div> <!-- timeline-content -->
-          </div> <!-- timeline-item -->
-          <span class="timeline-box bottom baby"></span>
-        </div>
-      </section>
-      <section id="resume" class="section">
-        <div class="paper">
-          <div class="row">
-            <h2 class="paper-title">Resume</h2>
-          </div>
-          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-        </div>
-      </section>
-      <section id="service" class="section">
-        <div class="paper">
-          <div class="row">
-            <h2 class="paper-title">Services</h2>
-          </div>
-          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
-        </div>
-      </section>
-      <section id="works" class="section">
-        <div class="paper">
-          <div class="row">
-            <h2 class="paper-title">Works</h2>
-          </div>
-          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
-        </div>
-      </section>
-      <section id="contact" class="section">
-        <div class="paper">
-          <div class="row">
-            <h2 class="paper-title">Contact</h2>
-          </div>
-          <p class="description">The Sky People have sent us a message... that they can take whatever they want. That no one can stop them. Well, we will send them a message. You ride out as fast as the wind can carry you. You tell the other clans to come. Tell them Toruk Macto calls to them! You fly now, with me! My brothers! Sisters! And we will show the Sky People... that they cannot take whatever they want! And that this... this is our land!</p>
-          <div class="row dashed">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51412.49465270809!2d6.587479687255864!3d36.353973973564955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sdz!4v1470962453309" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-          <div class="row">
-            <h2>LET'S GET IN TOUCH</h2>
-            <div class="col-md-6">
-								
-									<ul class="get_in">
-										<li><i class="fa fa-envelope-o"></i><p>bourafai.a@gmail.com</p></li>
-										<li><i class="fa fa-phone"></i><p>+213 779 69 66 73</p></li>				
-										<li><i class="fa fa-map-marker"></i><p>Ain smara, Constantine, Algeria</p></li>
-										<li><a href="#"><i class="fa fa-cloud-download"></i><p>Download Vcard</p></a></li>	
-									</ul>
-							</div>
-            <div class="col-md-6">
-              <form class="form " action="">
-                  <input type="text" class="form-control" id="name" placeholder="Name">
-                  <input type="text" class="form-control" id="email" placeholder="Email">
-                  <textarea  class="form-control" name="" id="" cols="30" rows="8" placeholder="your message here"></textarea>
-                <input type="submit" class="btn btn-default btn-block" value="submit" />
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+
+<div class="resume">
+  <div class="left">
+   <div class="lefttop"></div>
+   <div class="leftbottom">
+     <h3>PAUL SIMON</h3>
+     <span>Graphic designer</span>
+     <h4 class=personal>
+    PERSONAL INFO
+     </h4>
+     <div class="peritem">  
+       <p>Birth &nbsp&nbsp &nbsp&ensp; &nbsp1987. 2. 12</p>
+     <p>Country&nbsp&nbsp&nbsp&ensp;Taiwan    </p>
+     <p>City &nbsp &nbsp &nbsp &ensp; Taipei</p></div>
+      <h4 class=contact>
+    CONTACT
+     </h4>
+<div class="conitem">
+   <p>Phone &nbsp&nbsp &nbsp&ensp; &nbsp+886 123 456 789</p>
+     <p>Moblie &nbsp&nbsp&nbsp&ensp; &nbsp0912345678 </p>
+  <p style='letter-spacing:0.2px'>email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppaulsimon@gmail.com</p>  
+     </div>
+  <h4 class=ed>EDUCATION</h4>
+    <div class="institute">
+      <P>Master of communication design<br>
+      <span style="font-weight:20; font-size:9px; letter-spacing:1px">
+NATIONAL TAIWAN UNIVERSITY OF SCIENCE AND TECHNOLOGY </span></br>2017
+<hr color=#fff size=0.5px>
+Bachelor of advertising and public relation
+<br>
+  <span style="font-weight:20; font-size:9px; letter-spacing:1px">
+SHIH HSIN UNIVERSITY </span><br>2010
+</P>
   </div>
+ <div class="icons">
+  <div class="fb"></div>
+  <div class="behance"></div>
+  <div class="medium"></div>
+    </div>
 </div>
-<div class="container">
-  <footer class=" col-md-5 col-md-offset-5 copyrights text-center">
-  <p>copyrights &copy; 2016 Aymene Bourafai</p>
-  </footer>
+    </div><div class="right">
+      <div class="profile">
+        <h4>PROFILE</h4>
+        <hr color=#375460 size=2px; style="margin-top:3px; margin-left:26px; margin-right: 26px" >
+<p>Hi, I am Simon, a graphic designer from Taipei, Taiwan. I earned a master's degree in industrial and commercial design from National Taiwan University of Science and Technology. Majoring in communication design, also have a background in advertising and marketing. I used to managed a Crowdfunding project on FlyingV (the result went very well), a branding illustration for a large corporation in mainland China, helping NGO producing a Vietnam board game.</p>
+   </div>
+  <div class="ability">
+    <div class="circle1">
+      <div class="tri1"></div>
+      <div class="littlecircle">
+        <div class="Design">
+          Graphic</br>Deisgn</div>
+      </div>
+    </div>
+    <div class="circle2">
+       <div class="tri2"></div>
+      <div class="littlecircle2">
+        <div class="markting">Markting</div>
+      </div>
+    </div>
+    <div class="circle3">
+      <div class="tri3"></div>
+      <div class="littlecircle3">
+        <div class="Front-end">Front-end</br>engineer</div>
+      </div>
+    </div>
+  </div>
+ <div class="experience"><h4>CASE EXPERIENCE</h4>
+   <hr color=#375460 size=2px; style="margin-top:3px; margin-left:26px; margin-right: 26px" >
+   <div class="tag1">&nbsp&nbsp2018
+   <div class="tagtri1"></div> 
+   </div>
+    <div class="tag2">&nbsp&nbsp2017
+    <div class="tagtri2"></div> 
+   </div>
+   <div class="tag3">&nbsp&nbsp2016
+    <div class="tagtri3"></div> 
+    </div>
+   <div class="tag4">&nbsp&nbsp2015
+    <div class="tagtri4"></div> 
+   </div>
+   <div class="verline">
+     <div class="spot"></div>
+     <div class="spot2"></div>
+     <div class="spot3"></div>
+     <div class="spot4"></div>
+   </div>
+   <div class="exitem">
+     <h4>SOCIAL ENTERPRISE INSIGHT</h4>
+<p>six-anniversary annual report</p> 
+ <h4>HUMANISTIC EDUCATION FOUNDATION</h4>
+     <p>illustration course of the child</p>
+     <h4>TRANSASIA SUSTERS ASSOCIATION</h4>
+     <p>vietnam board game</p>
+   <h4 style="margin-top:29px">5% DESIGN ACTION</h4>
+     <p>EDM design for the Study of design for elder </p>
+     <h4>COOL STONE CREATIVE</h4>
+     <p>Present+ CIS design</p>
+      <h4 style="margin-top:34px">COUNCIL of INDIGENOUS PEOPLES</h4>
+     <p>The map of indigenous tribe</p>
+     <h4>SOMNUS </h4>
+     <p>SOMNUS app design </p>
+     <h4>TAIPEI HAKKA AFFAIRS COMMISSION</h4>
+      <p>Mid-Autumn Festival</p>
+     <h4 style="margin-top:40px">SHINHO food enterprise</h4> 
+     <p>The food eco system digital project</p>
+          <h4>FLYINGV crowdfunding</h4>
+      <p>SOMNUS fundraising Planning</p>
+   </div>
+</div>
+<div class="software">
+  <h4>SKILL</h4>
+  <hr color=#375460 size=2px; style="margin-top:3px; margin-left:26px; margin-right: 26px" >
+  <div class="psbar">
+    PHOTHSHOP
+    <div class="barchart1">
+      <div class="value1"></div>
+    </div>
+  </div>
+  <div class="aibar">ILLUSTARTION
+  <div class="barchart2">
+      <div class="value2"></div>
+    </div></div>
+  <div class="idbar">INDESIGN
+    <div class="barchart3">
+      <div class="value3"></div></div>  
+    </div>
+  <div class="lrbar">LIGHTROOM
+    <div class="barchart4">
+      <div class="value4"></div></div>
+</div>
+  </div><div class="language">
+    <h4 style="margin-left:-11px">LANGUAGE</h4>
+      <hr color=#375460 size=2px; style="margin-top:3px; margin-left:16px; margin-right: 26px" >
+    <div class="mandarin">
+      <p>native</p>
+      <div class="mabar">
+      </div>
+      <div class="english">
+         <p>intermediate</p>
+        <div class="enbar">
+        </div>
+      </div>
+      <div class="jpn">
+        <p>basic</p>
+        <div class="jpbar"></div>
+      </div>
+      <div class="lancube">
+        <div class="cube1"></div> &nbspMAND
+        <div class="cube2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspENG</div>
+        <div class="cube3">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspJAP</div>
+      </div>
+      </div>
+  
+    </div>    
+
+</div>
+
 </div>
